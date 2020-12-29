@@ -20,20 +20,74 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(30, 29, 64);</string>
+   <string notr="true">*{
+background-color: rgb(30, 29, 64);
+color: rgb(242, 230, 216);
+}
+QTextEdit{
+font-size: 20px;
+}
+QLineEdit{
+border:none;
+border-bottom: 2px solid rgb(27, 101, 166);
+text-align: center;
+}
+#icon{
+background-color: rgb(74, 176, 217);
+border-radius:20px;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>891</width>
-      <height>581</height>
+      <x>0</x>
+      <y>0</y>
+      <width>1631</width>
+      <height>1031</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="readOnly">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>1690</x>
+      <y>50</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="icon">
+    <property name="geometry">
+     <rect>
+      <x>1640</x>
+      <y>40</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/files/baseline_account_circle_black_18dp.png</normaloff>:/files/baseline_account_circle_black_18dp.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>256</width>
+      <height>256</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -49,6 +103,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
