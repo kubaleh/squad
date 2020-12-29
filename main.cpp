@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
     QTimer::singleShot(5000, &w, SLOT(show()));
     w.show();
 
-
+    //komentarz
 
     //serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
     //QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
