@@ -16,8 +16,8 @@ int main(int argc, char *argv[]){
 
 
 
-    serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
-    QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
+    //serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
+    //QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
     //client.update(w.ui);
     return a.exec();
 }
