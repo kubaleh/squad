@@ -8,8 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->textEdit->setText("123456789");
-    serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
-    QObject::connect(&client, &serwer::closed, 0, &QCoreApplication::quit);
+    //serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
+    //QObject::connect(&client, &serwer::closed, 0, &QCoreApplication::quit);
     //client.update(ui);
 }
 
