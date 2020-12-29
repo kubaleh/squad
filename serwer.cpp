@@ -28,7 +28,11 @@ void serwer::onConnected()
 void serwer::onTextMessageReceived(QString message)
 {
     if (m_debug)
-        qDebug() << "Message received:" << message;
+    {
+            qDebug() << "Message received:" << message;
+            this->message=message;
+    }
+
     //tekst=message;
     //ui->textEdit->setText(message);
     //m_webSocket.close();

@@ -11,6 +11,7 @@ class serwer : public QObject
     Q_OBJECT
 public:
     //void update(Ui::MainWindow *);
+    QString message="no nic trzeba kończyć";
     explicit serwer(const QUrl &url, bool debug = false, QObject *parent = nullptr);
     Q_SIGNALS:
     void closed();

@@ -3,6 +3,7 @@
 #include<QSplashScreen>
 #include<QTimer>
 #include "serwer.h"
+#include <QtCore/QDebug>
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
     QSplashScreen * splash=new QSplashScreen;
@@ -16,8 +17,10 @@ int main(int argc, char *argv[]){
 
     //komentarz
 
-    //serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
-    //QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
-    //client.update(w.ui);
+    serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
+    qDebug()<<"co toasdas: "<<client.message;
+    QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
+    qDebug()<<"co to: "<<client.message;
+
     return a.exec();
 }
