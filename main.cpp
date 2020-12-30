@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
     serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
     qDebug()<<"co toasdas: "<<client.message;
     QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
-    qDebug()<<"co to: "<<client.message;
+    //qDebug()<<"co to: "<<client.message;
 
     return a.exec();
 }

@@ -12,8 +12,12 @@ serwer::serwer(const QUrl &url, bool debug, QObject *parent) :
     if (m_debug)
         qDebug() << "WebSocket server:" << url;
     connect(&m_webSocket, &QWebSocket::connected, this, &serwer::onConnected);
+     qDebug() << "WebSocket server:1" << url;
     connect(&m_webSocket, &QWebSocket::disconnected, this, &serwer::closed);
+     qDebug() << "WebSocket server:2" << url;
     m_webSocket.open(QUrl(url));
+
+     qDebug() << "WebSocket server:wrerew" << url;
 }
 void serwer::onConnected()
 {
