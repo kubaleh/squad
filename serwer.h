@@ -19,11 +19,18 @@ private Q_SLOTS:
     void onConnected();
     void onTextMessageReceived(QString message);
 
+signals:
+    void showMessage(QString text);
+
+public slots:
+    void setMessage(QString text);
+
 private:
     QWebSocket m_webSocket;
     QUrl m_url;
     bool m_debug;
     QString tekst;
+
 };
 
 #endif // SERWER_H

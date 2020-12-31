@@ -18,8 +18,9 @@ int main(int argc, char *argv[]){
     //komentarz
 
     serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
-    qDebug()<<"co toasdas: "<<client.message;
-    QObject::connect(&client, &serwer::closed, &a, &QCoreApplication::quit);
+    w.setString(client.message);
+    //qDebug()<<"co toasdas: "<<client.message;
+    QObject::connect(&client, &serwer::showMessage, &w, &MainWindow::setString);
     //qDebug()<<"co to: "<<client.message;
 
     return a.exec();
