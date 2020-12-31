@@ -4,5 +4,6 @@
     <qresource prefix="/">
         <file>account.png</file>
         <file>chat.png</file>
+        <file>refresh.png</file>
     </qresource>
 </RCC>

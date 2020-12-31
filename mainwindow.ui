@@ -30,11 +30,6 @@ font-size: 20px;
 QLineEdit{
 border:none;
 border-bottom: 2px solid rgb(27, 101, 166);
-
-}
-#icon{
-background-color: rgb(74, 176, 217);
-border-radius:20px;
 }
 #chat{
 font-size: 30px;
@@ -72,16 +67,6 @@ color: rgb(27, 101, 166);
     </property>
     <property name="placeholderText">
      <string>Enter username</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="chat_text">
-    <property name="geometry">
-     <rect>
-      <x>1650</x>
-      <y>260</y>
-      <width>241</width>
-      <height>191</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLabel" name="account_image">
@@ -138,8 +123,8 @@ color: rgb(27, 101, 166);
    <widget class="QLineEdit" name="chat_message">
     <property name="geometry">
      <rect>
-      <x>1670</x>
-      <y>460</y>
+      <x>1690</x>
+      <y>600</y>
       <width>201</width>
       <height>21</height>
      </rect>
@@ -149,6 +134,48 @@ color: rgb(27, 101, 166);
     </property>
     <property name="clearButtonEnabled">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="chat_text">
+    <property name="geometry">
+     <rect>
+      <x>1660</x>
+      <y>250</y>
+      <width>256</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="refresh">
+    <property name="geometry">
+     <rect>
+      <x>1740</x>
+      <y>880</y>
+      <width>80</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources.qrc">
+      <normaloff>:/refresh.png</normaloff>:/refresh.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

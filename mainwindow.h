@@ -23,5 +23,6 @@ private slots:
     void on_textEdit_textChanged();
     void on_username_editingFinished();
     void on_chat_message_returnPressed();
+    void on_refresh_clicked();
 };
 #endif // MAINWINDOW_H
