@@ -30,7 +30,7 @@ font-size: 20px;
 QLineEdit{
 border:none;
 border-bottom: 2px solid rgb(27, 101, 166);
-text-align: center;
+
 }
 #icon{
 background-color: rgb(74, 176, 217);
@@ -59,7 +59,7 @@ border-radius:20px;
      <rect>
       <x>1690</x>
       <y>50</y>
-      <width>161</width>
+      <width>221</width>
       <height>21</height>
      </rect>
     </property>
