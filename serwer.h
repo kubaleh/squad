@@ -11,6 +11,7 @@ class serwer : public QObject
     Q_OBJECT
 public:
     //void update(Ui::MainWindow *);
+    void send(QString type, QString username, QString text);
     QString message="no nic trzeba kończyć";
     explicit serwer(const QUrl &url, bool debug = false, QObject *parent = nullptr);
     Q_SIGNALS:
@@ -24,7 +25,6 @@ signals:
 
 public slots:
     void setMessage(QString text);
-
 private:
     QWebSocket m_webSocket;
     QUrl m_url;

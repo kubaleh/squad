@@ -21,7 +21,6 @@ void serwer::onConnected(){
         qDebug() << "WebSocket connected";
     connect(&m_webSocket, &QWebSocket::textMessageReceived,
             this, &serwer::onTextMessageReceived);
-    //m_webSocket.sendTextMessage(QStringLiteral("Joined"));
 }
 void serwer::onTextMessageReceived(QString message){
     if (m_debug){
@@ -34,4 +33,9 @@ void serwer::setMessage(QString text){
     this->message=text;
     qDebug() << "I am setting message "<<message;
     emit showMessage(text);
+}
+void serwer::send(QString type, QString username, QString text){
+    QString message="*"+type+"*"+username+"*"+text+"*";
+    m_webSocket.sendTextMessage(message);
+    qDebug()<<"Sending "<<message;
 }

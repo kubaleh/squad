@@ -19,5 +19,9 @@ public:
    // serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
     void setString(QString text);
     Ui::MainWindow *ui;
+private slots:
+    void on_textEdit_textChanged();
+    void on_username_editingFinished();
+    void on_chat_message_returnPressed();
 };
 #endif // MAINWINDOW_H

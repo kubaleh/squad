@@ -1,6 +1,8 @@
 <RCC>
-    <qresource prefix="/files">
-        <file>baseline_account_circle_black_18dp.png</file>
-    </qresource>
+    <qresource prefix="/files"/>
     <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/">
+        <file>account.png</file>
+        <file>chat.png</file>
+    </qresource>
 </RCC>
