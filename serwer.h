@@ -10,6 +10,7 @@ class serwer : public QObject
 {
     Q_OBJECT
 public:
+
     //void update(Ui::MainWindow *);
     void send(QString type, QString username, QString text);
     QString message="no nic trzeba kończyć";

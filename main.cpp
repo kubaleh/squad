@@ -17,6 +17,7 @@ int main(int argc, char *argv[]){
     serwer client(QUrl(QStringLiteral("ws://kubaleh.herokuapp.com")), 1);
     w.setString(client.message);
     QObject::connect(&client, &serwer::showMessage, &w, &MainWindow::setString);
-    client.send("chat", "Jakub Lehnhardt", "Co tam mordo?");
+    QObject::connect(&w, &MainWindow::sendMessageChat, &client, &serwer::send);
+    //client.send("chat", "Jakub Lehnhardt", "Co tam mordo?");
     return a.exec();
 }
