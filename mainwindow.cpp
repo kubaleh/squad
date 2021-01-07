@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "serwer.h"
+#include<time.h>
+#include<cstdlib>
 #include <QDebug>
 bool to_change=true;
 MainWindow::MainWindow(QWidget *parent)
@@ -9,6 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->chat_text->document()->setDefaultStyleSheet("div{color:#4ab0d9;} div_2{color:#d90d32}");
+    srand(time(nullptr));
+    int t=rand()%10000+1;
+    this->username="user"+QString::number(t);;
 }
 MainWindow::~MainWindow(){
     delete ui;
