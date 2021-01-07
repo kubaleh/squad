@@ -25,6 +25,10 @@ private slots:
     void on_username_returnPressed();
     void on_chat_message_returnPressed();
     void on_refresh_clicked();
+    void on_username_editingFinished();
+
+    void on_textEdit_textChanged();
+
 signals:
     void sendMessageChat(QString type,QString username,QString text);
 };
