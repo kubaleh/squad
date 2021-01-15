@@ -6,10 +6,12 @@
 #include <QtCore/QDebug>
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
+    a.setWindowIcon(QIcon(":/logo.ico"));
     QSplashScreen * splash=new QSplashScreen;
-    splash->setPixmap(QPixmap("C:/Users/Jakub Lehnhardt/Desktop/cat.png"));
+    splash->setPixmap(QPixmap(":/logo.png"));
     splash->show();
     MainWindow w;
+    w.setWindowTitle("</>Squad");
     w.setWindowState(Qt::WindowMaximized);
     QTimer::singleShot(5000, splash, SLOT(close()));
     QTimer::singleShot(5000, &w, SLOT(show()));
